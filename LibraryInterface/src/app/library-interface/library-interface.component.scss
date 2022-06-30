@@ -1,0 +1,24 @@
+#add-success-alert,
+#delete-success-alert,
+#update-success-alert{
+  display: none;
+}
+#add-success-alert,
+#delete-success-alert,
+#update-success-alert{
+  animation-name: fadeInAndOut;
+  animation-duration: 4s;
+}
+
+@keyframes fadeInAndOut {
+  0%{opacity: 0;}
+  50%{opacity: 1;}
+  100%{opacity:0;}
+}
+
+//This depending on what kind of browser you using
+@-webkit-keyframes fadeInAndOut {
+  0%{opacity: 0;}
+  50%{opacity: 1;}
+  100%{opacity:0;}
+}

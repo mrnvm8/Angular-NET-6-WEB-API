@@ -1,0 +1,20 @@
+<!---[(ngModel)] is used when editing existing data from database -->
+<form>
+  <div class="form-floating mb-3">
+    <input class="form-control" id="title" placeholder="Title" [(ngModel)]="title" name ="title">
+    <label for="title" class="form-label" >Title</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="category" placeholder="Category" [(ngModel)]="category" name ="category">
+    <label for="category" class="form-label" >Category</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="author" placeholder="Author" [(ngModel)]="author" name ="author">
+    <label for="author" class="form-label" >Author</label>
+  </div>
+  <!---if the id == 0 show the Add button else show update button-->
+  <button (click) ="createBook()"  type="button" class="btn btn-success" *ngIf="book.book_Id == 0">
+    Add Changes</button>
+  <button (click) ="updateBook()" type="button" class="btn btn-primary" *ngIf="book.book_Id != 0">
+    Update Changes</button>
+</form>
